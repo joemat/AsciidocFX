@@ -1680,6 +1680,13 @@ public class ApplicationController extends TextWebSocketHandler implements Initi
         });
     }
 
+    public void ditaa(String ditaa, String fileName)throws IOException {
+
+        	System.out.println("DITAA called: ");
+        	System.out.println(ditaa);
+        	System.out.println("=> " + fileName);
+    }
+
 
     public void chartBuildFromCsv(String csvFile, String fileName, String chartType, String options) {
 
