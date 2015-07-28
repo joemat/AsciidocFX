@@ -24,6 +24,7 @@ import com.kodcu.service.convert.pdf.AbstractPdfConverter;
 import com.kodcu.service.convert.slide.SlideConverter;
 import com.kodcu.service.extension.MathJaxService;
 import com.kodcu.service.extension.PlantUmlService;
+import com.kodcu.service.extension.DitaaService;
 import com.kodcu.service.extension.TreeService;
 import com.kodcu.service.extension.chart.ChartProvider;
 import com.kodcu.service.shortcut.ShortcutProvider;
@@ -228,7 +229,10 @@ public class ApplicationController extends TextWebSocketHandler implements Initi
 
     @Autowired
     private PlantUmlService plantUmlService;
-
+    
+    @Autowired
+    private DitaaService ditaaService;
+    
     @Autowired
     private EditorService editorService;
 
@@ -1680,11 +1684,10 @@ public class ApplicationController extends TextWebSocketHandler implements Initi
         });
     }
 
-    public void ditaa(String ditaa, String fileName)throws IOException {
-
-        	System.out.println("DITAA called: ");
-        	System.out.println(ditaa);
-        	System.out.println("=> " + fileName);
+    public void ditaa(String ditaa, String fileName) throws IOException {
+    	 threadService.runTaskLater(() -> {
+             ditaaService.ditaa(ditaa, fileName);
+         });
     }
 
 
