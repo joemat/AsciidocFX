@@ -1500,6 +1500,7 @@ return true;</string>
     </applications>
   </installerGui>
   <mediaSets>
+<!--
     <windows name="Windows Installer" id="86" customizedId="" mediaFileName="AsciidocFX_Windows" installDir="${compiler:sys.shortName}" overridePrincipalLanguage="false" jreBitType="64" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" downloadURL="" includeAllDownloadableComponents="false" includedJRE="windows-amd64-1.8.0_60" manualJREEntry="false" bundleType="1" jreURL="" jreShared="false" directDownload="false" installOnlyIfNecessary="false" customInstallBaseDir="" contentFilesType="1" verifyIntegrity="true">
       <excludedComponents />
       <includedDownloadableComponents />
@@ -1565,6 +1566,7 @@ return true;</string>
         <customAttributes />
       </autoUpdate>
     </windows>
+-->
     <unixArchive name="Unix Archive No JRE" id="413" customizedId="" mediaFileName="AsciidocFX_Linux_No_JRE" installDir="${compiler:sys.shortName}" overridePrincipalLanguage="false" jreBitType="all" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" downloadURL="" includeAllDownloadableComponents="true" includedJRE="" manualJREEntry="false">
       <excludedComponents />
       <includedDownloadableComponents />
@@ -1578,7 +1580,7 @@ return true;</string>
         <customAttributes />
       </autoUpdate>
     </unixArchive>
-    <windowsArchive name="Windows Archive No JRE" id="416" customizedId="" mediaFileName="AsciidocFX_Windows_No_JRE" installDir="${compiler:sys.shortName}" overridePrincipalLanguage="false" jreBitType="64" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" downloadURL="" includeAllDownloadableComponents="true" includedJRE="" manualJREEntry="false">
+  <!--  <windowsArchive name="Windows Archive No JRE" id="416" customizedId="" mediaFileName="AsciidocFX_Windows_No_JRE" installDir="${compiler:sys.shortName}" overridePrincipalLanguage="false" jreBitType="64" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" downloadURL="" includeAllDownloadableComponents="true" includedJRE="" manualJREEntry="false">
       <excludedComponents />
       <includedDownloadableComponents />
       <excludedLaunchers />
@@ -1591,6 +1593,7 @@ return true;</string>
         <customAttributes />
       </autoUpdate>
     </windowsArchive>
+-->
   </mediaSets>
   <buildIds buildAll="true" />
   <buildOptions verbose="false" faster="false" disableSigning="false" disableJreBundling="false" debug="false" />
